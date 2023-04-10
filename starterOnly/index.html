@@ -29,7 +29,7 @@
     </div>
     </div>
   </div>
-    <main>
+    <main id="content">
       <div class="hero-section">
         <div class="hero-content">
           <h1 class="hero-headline">
@@ -61,14 +61,15 @@
               action="index.html"
               method="get"
               onsubmit="return validate();"
+              id="inscriptionform"
             >
               <div
                 class="formData">
-                <label for="first">Prénom</label><br>
+                <label for="name">Prénom</label><br>
                 <input
                   class="text-control"
                   type="text"
-                  id="first"
+                  id="name"
                   name="first"
                   minlength="2"
                 /><br>
@@ -76,11 +77,11 @@
               </div>
               <div
                 class="formData">
-                <label for="last">Nom</label><br>
+                <label for="surname">Nom</label><br>
                 <input
                   class="text-control"
                   type="text"
-                  id="last"
+                  id="surname"
                   name="last"
                 /><br>
                 <p class="error surname-error">nom invalide</p>
@@ -105,7 +106,7 @@
                   id="birthdate"
                   name="birthdate"
                 /><br>
-                <p class="error birthday-error">date invalide</p>
+                <p class="error birthdate-error">date invalide</p>
               </div>
               <div
                 class="formData">
@@ -195,6 +196,7 @@
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
+                <p class="error cgu-error">vous devez accepter les cgu</p>
                 <br>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
@@ -207,7 +209,6 @@
                 C'est parti
               </button>
             </form>
-            <p class="error cgu-error">vous devez accepter les cgu</p>
           </div>
         </div>
       </div>
@@ -217,9 +218,16 @@
         Copyright 2014 - 2022, GameOn Inc.
       </p>
     </footer>
-    <p class="modal-success">
-      Merci ! Votre réservation a été reçue.
-    </p>
+    <div class="modal-success">
+      <span class="success-close"></span>
+      <h3>
+        Merci pour <br>
+        votre inscription
+      </h3>
+      <button class="modal-close-btn">
+        Fermer
+      </button>
+    </div>
     <script src="modal.js"></script>
   </body>
 </html>
